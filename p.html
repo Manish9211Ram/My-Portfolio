@@ -1,0 +1,130 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava } from "react-icons/fa";
+import { SiMongodb, SiMysql } from "react-icons/si";
+
+export default function Portfolio() {
+  const bgClass = "bg-gradient-to-br from-black via-zinc-900 to-black text-white";
+
+  const techStack = [
+    { icon: <FaHtml5 />, label: "HTML5" },
+    { icon: <FaCss3Alt />, label: "CSS3" },
+    { icon: <FaJs />, label: "JavaScript" },
+    { icon: <FaPython />, label: "Python" },
+    { icon: <FaJava />, label: "Java" },
+    { icon: <SiMysql />, label: "MySQL" },
+    { icon: <SiMongodb />, label: "MongoDB" },
+  ];
+
+  return (
+    <main className={`min-h-screen ${bgClass} p-6 font-sans overflow-x-hidden transition-colors duration-700`}>
+      <motion.header
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-5xl font-bold mb-2 text-purple-400 animate-pulse">Manish Ram</h1>
+        <p className="text-lg text-gray-400">Full Stack Developer</p>
+        <div className="mt-4 flex justify-center gap-4">
+          <a href="/ManishRam_Resume.pdf" download>
+            <Button className="hover:scale-105 transition-transform flex gap-2">
+              <Download className="w-4 h-4" /> Download Resume
+            </Button>
+          </a>
+        </div>
+        <p className="mt-4 max-w-2xl mx-auto text-gray-300">
+          Full Stack Developer with expertise in front-end design, database integration,
+          and AI implementation. Proficient in Java, Python, and web development. Currently
+          pursuing AI specialization through a minor in AI by IIT Ropar, and expanding skills in
+          cloud technologies, Cisco, and machine learning through ongoing master's studies.
+        </p>
+      </motion.header>
+
+      <section className="flex justify-center flex-wrap gap-6 mb-12">
+        {techStack.map((tech, i) => (
+          <motion.div
+            key={i}
+            className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:rotate-6 hover:scale-110 transition-transform"
+            title={tech.label}
+            whileHover={{ rotate: 10 }}
+          >
+            {tech.icon}
+          </motion.div>
+        ))}
+      </section>
+
+      <section className="grid md:grid-cols-2 gap-6 mb-20">
+        <motion.div
+          className="bg-zinc-900 rounded-2xl p-6 shadow-xl border border-zinc-800 hover:shadow-purple-500/30 transition-shadow"
+          whileHover={{ scale: 1.03 }}
+        >
+          <h2 className="text-xl font-semibold mb-4 text-purple-300">Skills</h2>
+          <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm">
+            <li><strong>Languages:</strong> Python, Java, C, C++, R, Prolog, Shell Scripting, JavaScript, PHP</li>
+            <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap, Figma</li>
+            <li><strong>Backend:</strong> Django, PHP</li>
+            <li><strong>Databases:</strong> MySQL, MongoDB, Oracle</li>
+            <li><strong>Tools:</strong> Linux, OpenCV, GitHub, Teachable Machine</li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          className="bg-zinc-900 rounded-2xl p-6 shadow-xl border border-zinc-800 hover:shadow-purple-500/30 transition-shadow"
+          whileHover={{ scale: 1.03 }}
+        >
+          <h2 className="text-xl font-semibold mb-4 text-purple-300">Education</h2>
+          <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm">
+            <li>MCA – 1st Year, Centurion University of Technology and Management</li>
+            <li>Minor in Artificial Intelligence – Ongoing, IIT Ropar</li>
+          </ul>
+        </motion.div>
+      </section>
+
+      <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-10 text-center text-purple-400">Projects</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { title: "Aria – Desktop Assistant", desc: "Voice-controlled Python AI assistant." },
+            { title: "Space Invader", desc: "Retro-style arcade game built using Pygame." },
+            { title: "Hospital Management System", desc: "A full-stack web app for hospital records." },
+            { title: "Tic Tac Toe", desc: "Classic game with AI logic in Python." },
+            { title: "Fuzzy URL Shortener", desc: "Custom short-link generator with fuzzy search." },
+          ].map((project, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              className="bg-zinc-800 p-6 rounded-2xl shadow-md border border-zinc-700 hover:shadow-purple-500/30 transition-shadow"
+            >
+              <h3 className="text-xl font-semibold mb-2 text-purple-200">{project.title}</h3>
+              <p className="text-sm text-gray-400">{project.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <footer className="text-center mt-12 border-t border-zinc-800 pt-6">
+        <h2 className="text-xl font-semibold mb-4 text-purple-300">Contact</h2>
+        <motion.div
+          className="flex justify-center gap-6 text-gray-300"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <a aria-label="Email" href="mailto:manishramforcomputer@gmail.com" target="_blank" rel="noopener noreferrer">
+            <Mail className="w-6 h-6 hover:text-purple-400 transition-colors" />
+          </a>
+          <a aria-label="GitHub" href="https://github.com/Manish9211Ram" target="_blank" rel="noopener noreferrer">
+            <Github className="w-6 h-6 hover:text-purple-400 transition-colors" />
+          </a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/manish-ram-14072b24b/" target="_blank" rel="noopener noreferrer">
+            <Linkedin className="w-6 h-6 hover:text-purple-400 transition-colors" />
+          </a>
+        </motion.div>
+        <p className="mt-4 text-sm text-gray-500">© 2025 Manish Ram. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+}
