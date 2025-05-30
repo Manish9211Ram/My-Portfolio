@@ -21,11 +21,11 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md z-50 border-b border-purple-500/20">
+    <nav className="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-blue-500/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-bold text-white">
-            Manish <span className="text-purple-400">Ram</span>
+            Manish <span className="text-blue-400">Ram</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -34,7 +34,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2"
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center space-x-2"
               >
                 <item.icon size={18} />
                 <span>{item.label}</span>
@@ -58,7 +58,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center space-x-2 py-2"
+                className="block w-full text-left text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center space-x-2 py-2"
               >
                 <item.icon size={18} />
                 <span>{item.label}</span>

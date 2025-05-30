@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Calendar, MapPin, Award, BookOpen } from "lucide-react";
 
@@ -47,9 +46,9 @@ const Experience = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Experience & <span className="text-purple-400">Training</span>
+            Experience & <span className="text-blue-400">Training</span>
           </h2>
-          <div className="w-24 h-1 bg-purple-400 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             Professional experience and specialized training programs that have shaped my skills 
             and prepared me for the challenges in the tech industry.
@@ -60,22 +59,22 @@ const Experience = () => {
           {/* Professional Experience */}
           <div>
             <h3 className="text-2xl font-semibold text-white mb-8 flex items-center">
-              <Briefcase className="text-purple-400 mr-3" size={28} />
+              <Briefcase className="text-blue-400 mr-3" size={28} />
               Professional Experience
             </h3>
             
             {experiences.map((exp, index) => (
               <Card 
                 key={index}
-                className="bg-slate-800/50 border-purple-500/20 hover:bg-slate-800/70 transition-all duration-300"
+                className="bg-gray-800/50 border-blue-500/20 hover:bg-gray-800/70 transition-all duration-300"
               >
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
-                      <p className="text-purple-400 font-medium">{exp.company}</p>
+                      <p className="text-blue-400 font-medium">{exp.company}</p>
                     </div>
-                    <span className="px-3 py-1 bg-purple-600 text-white rounded-full text-sm">
+                    <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">
                       {exp.type}
                     </span>
                   </div>
@@ -92,7 +91,7 @@ const Experience = () => {
                     <ul className="text-gray-300 space-y-1">
                       {exp.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className="flex items-start">
-                          <span className="text-purple-400 mr-2">•</span>
+                          <span className="text-blue-400 mr-2">•</span>
                           {highlight}
                         </li>
                       ))}
@@ -102,10 +101,10 @@ const Experience = () => {
               </Card>
             ))}
 
-            <Card className="mt-6 bg-gradient-to-r from-green-600/20 to-blue-600/20 border-green-500/30">
+            <Card className="mt-6 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border-emerald-500/30">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <Award className="text-green-400 mr-3" size={24} />
+                  <Award className="text-emerald-400 mr-3" size={24} />
                   <h4 className="text-lg font-semibold text-white">Looking Forward</h4>
                 </div>
                 <p className="text-gray-300">
@@ -120,7 +119,7 @@ const Experience = () => {
           {/* Training & Bootcamps */}
           <div>
             <h3 className="text-2xl font-semibold text-white mb-8 flex items-center">
-              <BookOpen className="text-purple-400 mr-3" size={28} />
+              <BookOpen className="text-blue-400 mr-3" size={28} />
               Specialized Training
             </h3>
             
@@ -128,11 +127,11 @@ const Experience = () => {
               {bootcamps.map((bootcamp, index) => (
                 <Card 
                   key={index}
-                  className="bg-slate-800/30 border-purple-500/10 hover:bg-slate-800/50 transition-all duration-300"
+                  className="bg-gray-800/30 border-blue-500/10 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   <CardContent className="p-5">
                     <h4 className="text-lg font-semibold text-white mb-2">{bootcamp.title}</h4>
-                    <div className="flex items-center text-purple-400 mb-2">
+                    <div className="flex items-center text-blue-400 mb-2">
                       <MapPin size={16} className="mr-2" />
                       {bootcamp.provider}
                     </div>
@@ -142,7 +141,7 @@ const Experience = () => {
               ))}
             </div>
 
-            <Card className="mt-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border-purple-500/30">
+            <Card className="mt-6 bg-gradient-to-r from-blue-600/20 to-violet-600/20 border-blue-500/30">
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Continuous Learning</h4>
                 <p className="text-gray-300 mb-4">
@@ -151,11 +150,11 @@ const Experience = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-purple-400">4+</div>
+                    <div className="text-2xl font-bold text-blue-400">4+</div>
                     <div className="text-gray-300 text-sm">Bootcamps Completed</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-purple-400">100+</div>
+                    <div className="text-2xl font-bold text-blue-400">100+</div>
                     <div className="text-gray-300 text-sm">Hours of Training</div>
                   </div>
                 </div>

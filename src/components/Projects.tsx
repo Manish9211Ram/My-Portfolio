@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Gamepad2, Hospital, Puzzle, Bot, Link, Globe, Building, Leaf, Network } from "lucide-react";
@@ -73,11 +72,11 @@ const Projects = () => {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      "Major Project": "bg-purple-600",
-      "AI/ML Project": "bg-green-600",
-      "Management System": "bg-blue-600",
-      "Networking Project": "bg-yellow-600",
-      "Web Application": "bg-indigo-600",
+      "Major Project": "bg-blue-600",
+      "AI/ML Project": "bg-emerald-600",
+      "Management System": "bg-violet-600",
+      "Networking Project": "bg-orange-600",
+      "Web Application": "bg-cyan-600",
       "Web Game": "bg-pink-600",
       "Game Development": "bg-red-600"
     };
@@ -85,13 +84,13 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-900/50">
+    <section id="projects" className="py-20 px-4 bg-gray-900/50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured <span className="text-purple-400">Projects</span>
+            Featured <span className="text-blue-400">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-purple-400 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             A showcase of my technical skills through diverse projects spanning AI, web development, 
             game creation, and system management solutions.
@@ -102,13 +101,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className={`bg-slate-800/50 border-purple-500/20 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 ${
-                project.highlight ? 'ring-2 ring-purple-500/50' : ''
+              className={`bg-gray-800/50 border-blue-500/20 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 ${
+                project.highlight ? 'ring-2 ring-blue-500/50' : ''
               }`}
             >
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <project.icon className="text-purple-400" size={32} />
+                  <project.icon className="text-blue-400" size={32} />
                   <span className={`px-2 py-1 rounded-full text-xs text-white ${getCategoryColor(project.category)}`}>
                     {project.category}
                   </span>
@@ -132,7 +131,7 @@ const Projects = () => {
                   <Button 
                     size="sm" 
                     variant="outline" 
-                    className="border-purple-500/50 text-purple-400 hover:bg-purple-600 hover:text-white"
+                    className="border-blue-500/50 text-blue-400 hover:bg-blue-600 hover:text-white"
                   >
                     <Github size={16} className="mr-2" />
                     Code
@@ -140,7 +139,7 @@ const Projects = () => {
                   {project.category.includes("Web") && (
                     <Button 
                       size="sm" 
-                      className="bg-purple-600 hover:bg-purple-700"
+                      className="bg-blue-600 hover:bg-blue-700"
                     >
                       <ExternalLink size={16} className="mr-2" />
                       Demo
@@ -153,20 +152,20 @@ const Projects = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
+          <Card className="bg-gradient-to-r from-blue-600/20 to-emerald-600/20 border-blue-500/30">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold text-white mb-4">Project Highlights</h3>
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">9+</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">9+</div>
                   <div className="text-gray-300">Completed Projects</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">5+</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">5+</div>
                   <div className="text-gray-300">Technologies Used</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">100%</div>
                   <div className="text-gray-300">Passion Driven</div>
                 </div>
               </div>

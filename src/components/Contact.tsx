@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Github, Linkedin, Calendar, Download } from "lucide-react";
@@ -41,13 +40,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-slate-900/50">
+    <section id="contact" className="py-20 px-4 bg-gray-900/50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Get In <span className="text-purple-400">Touch</span>
+            Get In <span className="text-blue-400">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-purple-400 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             I'm always excited to connect with fellow developers, potential collaborators, 
             and organizations that share a passion for innovation and learning. Let's build something amazing together!
@@ -57,13 +56,13 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-800/50 border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="p-3 bg-purple-600 rounded-lg">
+                      <div className="p-3 bg-blue-600 rounded-lg">
                         <info.icon className="text-white" size={24} />
                       </div>
                       <div>
@@ -71,7 +70,7 @@ const Contact = () => {
                         {info.link ? (
                           <a 
                             href={info.link}
-                            className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                            className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
                           >
                             {info.value}
                           </a>
@@ -85,7 +84,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-800/50 border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Social Links</h3>
                 <div className="space-y-4">
@@ -95,9 +94,9 @@ const Contact = () => {
                       href={social.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-4 p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:scale-105"
+                      className="flex items-center space-x-4 p-4 bg-gray-700/50 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-105"
                     >
-                      <social.icon className="text-purple-400" size={24} />
+                      <social.icon className="text-blue-400" size={24} />
                       <div>
                         <h4 className="text-white font-medium">{social.label}</h4>
                         <p className="text-gray-300">{social.value}</p>
@@ -111,7 +110,7 @@ const Contact = () => {
 
           {/* Call to Action */}
           <div className="space-y-8">
-            <Card className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 border-purple-500/30">
+            <Card className="bg-gradient-to-br from-blue-600/20 to-emerald-600/20 border-blue-500/30">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-semibold text-white mb-4">Let's Collaborate!</h3>
                 <p className="text-gray-300 mb-6">
@@ -121,7 +120,7 @@ const Contact = () => {
                 </p>
                 <div className="space-y-4">
                   <Button 
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                     onClick={() => window.location.href = 'mailto:manishramforcomputer@gmail.com'}
                   >
                     <Mail size={20} className="mr-2" />
@@ -129,7 +128,7 @@ const Contact = () => {
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="w-full border-purple-500/50 text-purple-400 hover:bg-purple-600 hover:text-white"
+                    className="w-full border-blue-500/50 text-blue-400 hover:bg-blue-600 hover:text-white"
                   >
                     <Download size={20} className="mr-2" />
                     Download Resume
@@ -138,7 +137,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20">
+            <Card className="bg-gray-800/50 border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Personal Details</h3>
                 <div className="space-y-3 text-gray-300">
@@ -158,7 +157,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-r from-green-600/20 to-purple-600/20 border-green-500/30">
+            <Card className="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border-emerald-500/30">
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Current Focus</h4>
                 <p className="text-gray-300 text-sm">

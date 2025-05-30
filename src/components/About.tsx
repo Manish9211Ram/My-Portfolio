@@ -8,15 +8,15 @@ const About = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About <span className="text-purple-400">Me</span>
+            About <span className="text-blue-400">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-purple-400 mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
-              <User className="text-purple-400" size={28} />
+              <User className="text-blue-400" size={28} />
               <h3 className="text-2xl font-semibold text-white">Who I Am</h3>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -33,10 +33,10 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:bg-slate-800/70 transition-all duration-300">
+            <Card className="bg-gray-800/50 border-blue-500/20 hover:bg-gray-800/70 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
-                  <Target className="text-purple-400" size={24} />
+                  <Target className="text-blue-400" size={24} />
                   <h4 className="text-xl font-semibold text-white">My Mission</h4>
                 </div>
                 <p className="text-gray-300">
@@ -47,10 +47,10 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-800/50 border-purple-500/20 hover:bg-slate-800/70 transition-all duration-300">
+            <Card className="bg-gray-800/50 border-blue-500/20 hover:bg-gray-800/70 transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3 mb-4">
-                  <Heart className="text-purple-400" size={24} />
+                  <Heart className="text-blue-400" size={24} />
                   <h4 className="text-xl font-semibold text-white">What I Love</h4>
                 </div>
                 <p className="text-gray-300">
@@ -65,19 +65,19 @@ const About = () => {
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-purple-400">15+</div>
+            <div className="text-3xl font-bold text-blue-400">15+</div>
             <div className="text-gray-300">Programming Languages</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-purple-400">10+</div>
+            <div className="text-3xl font-bold text-blue-400">10+</div>
             <div className="text-gray-300">Major Projects</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-purple-400">5+</div>
+            <div className="text-3xl font-bold text-blue-400">5+</div>
             <div className="text-gray-300">Certifications</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-purple-400">2024</div>
+            <div className="text-3xl font-bold text-blue-400">2024</div>
             <div className="text-gray-300">B.Sc. Graduate</div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Manish <span className="text-purple-400">Ram</span>
+            Manish <span className="text-blue-400">Ram</span>
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-300 mb-8 animate-fade-in">
             Full Stack Developer & AI Enthusiast
@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in">
             <Button
               onClick={scrollToAbout}
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg transition-all duration-300 hover:scale-105"
             >
               Learn More About Me
             </Button>
@@ -36,7 +36,7 @@ const Hero = () => {
                 href="https://github.com/Manish9211Ram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-slate-800 hover:bg-purple-600 text-white rounded-full transition-all duration-300 hover:scale-110"
+                className="p-3 bg-gray-800 hover:bg-blue-600 text-white rounded-full transition-all duration-300 hover:scale-110"
               >
                 <Github size={24} />
               </a>
@@ -44,13 +44,13 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/manishramofficial"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-slate-800 hover:bg-purple-600 text-white rounded-full transition-all duration-300 hover:scale-110"
+                className="p-3 bg-gray-800 hover:bg-blue-600 text-white rounded-full transition-all duration-300 hover:scale-110"
               >
                 <Linkedin size={24} />
               </a>
               <a
                 href="mailto:manishramforcomputer@gmail.com"
-                className="p-3 bg-slate-800 hover:bg-purple-600 text-white rounded-full transition-all duration-300 hover:scale-110"
+                className="p-3 bg-gray-800 hover:bg-blue-600 text-white rounded-full transition-all duration-300 hover:scale-110"
               >
                 <Mail size={24} />
               </a>
