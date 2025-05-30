@@ -73,12 +73,12 @@ const Education = () => {
               {educationData.map((edu, index) => (
                 <Card 
                   key={index} 
-                  className="bg-gray-800/50 border-blue-500/20 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105"
+                  className="bg-gray-800/70 border-blue-500/20 hover:bg-gray-800/90 transition-all duration-300 hover:scale-105"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-3">
                       <h4 className="text-lg font-semibold text-white">{edu.degree}</h4>
-                      <span className={`px-3 py-1 rounded-full text-sm ${
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                         edu.status === 'Currently Pursuing' || edu.status === 'Pursuing' 
                           ? 'bg-blue-600 text-white' 
                           : 'bg-emerald-600 text-white'
@@ -86,11 +86,11 @@ const Education = () => {
                         {edu.status}
                       </span>
                     </div>
-                    <div className="flex items-center text-gray-300 mb-2">
+                    <div className="flex items-center text-gray-200 mb-2">
                       <MapPin size={16} className="mr-2" />
                       {edu.institution}
                     </div>
-                    <div className="flex items-center text-gray-400">
+                    <div className="flex items-center text-gray-300">
                       <Calendar size={16} className="mr-2" />
                       {edu.year}
                     </div>
@@ -109,23 +109,23 @@ const Education = () => {
               {certifications.map((cert, index) => (
                 <Card 
                   key={index}
-                  className="bg-gray-800/30 border-blue-500/10 hover:bg-gray-800/50 transition-all duration-300"
+                  className="bg-gray-800/60 border-blue-500/20 hover:bg-gray-800/80 transition-all duration-300"
                 >
                   <CardContent className="p-4">
-                    <p className="text-gray-300">{cert}</p>
+                    <p className="text-gray-200">{cert}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <Card className="mt-6 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 border-blue-500/30">
+            <Card className="mt-6 bg-gray-800/70 border-blue-500/30">
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Recent Achievements</h4>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Internship at INTERNSHALA as ISP (March - April 2025)</li>
-                  <li>• Participation in ISP 48 First Trainings Contest Webinar</li>
-                  <li>• Let's Upgrade: Placement Prep & JavaScript Bootcamp</li>
-                  <li>• Node.js Bootcamp & AI-Powered YouTube Summarizer</li>
+                <ul className="text-gray-200 space-y-2">
+                  <li className="text-gray-200">• Internship at INTERNSHALA as ISP (March - April 2025)</li>
+                  <li className="text-gray-200">• Participation in ISP 48 First Trainings Contest Webinar</li>
+                  <li className="text-gray-200">• Let's Upgrade: Placement Prep & JavaScript Bootcamp</li>
+                  <li className="text-gray-200">• Node.js Bootcamp & AI-Powered YouTube Summarizer</li>
                 </ul>
               </CardContent>
             </Card>
