@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Github, Linkedin, Calendar, Download } from "lucide-react";
@@ -40,14 +41,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gray-900/50">
+    <section id="contact" className="py-20 px-4 bg-gray-900">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get In <span className="text-blue-400">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-200 text-lg max-w-3xl mx-auto">
             I'm always excited to connect with fellow developers, potential collaborators, 
             and organizations that share a passion for innovation and learning. Let's build something amazing together!
           </p>
@@ -56,7 +57,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card className="bg-gray-800/50 border-blue-500/20">
+            <Card className="bg-gray-800/70 border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
                 <div className="space-y-6">
@@ -70,12 +71,12 @@ const Contact = () => {
                         {info.link ? (
                           <a 
                             href={info.link}
-                            className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                            className="text-gray-200 hover:text-blue-400 transition-colors duration-200"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-gray-300">{info.value}</p>
+                          <p className="text-gray-200">{info.value}</p>
                         )}
                       </div>
                     </div>
@@ -84,7 +85,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/50 border-blue-500/20">
+            <Card className="bg-gray-800/70 border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Social Links</h3>
                 <div className="space-y-4">
@@ -99,7 +100,7 @@ const Contact = () => {
                       <social.icon className="text-blue-400" size={24} />
                       <div>
                         <h4 className="text-white font-medium">{social.label}</h4>
-                        <p className="text-gray-300">{social.value}</p>
+                        <p className="text-gray-200">{social.value}</p>
                       </div>
                     </a>
                   ))}
@@ -110,10 +111,10 @@ const Contact = () => {
 
           {/* Call to Action */}
           <div className="space-y-8">
-            <Card className="bg-gradient-to-br from-blue-600/20 to-emerald-600/20 border-blue-500/30">
+            <Card className="bg-gray-800/70 border-blue-500/30">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-semibold text-white mb-4">Let's Collaborate!</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-200 mb-6">
                   I'm passionate about working on innovative projects, contributing to open source, 
                   and helping fellow developers grow. Whether you have a project idea, need technical 
                   guidance, or just want to connect, I'd love to hear from you!
@@ -137,10 +138,10 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-800/50 border-blue-500/20">
+            <Card className="bg-gray-800/70 border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Personal Details</h3>
-                <div className="space-y-3 text-gray-300">
+                <div className="space-y-3 text-gray-200">
                   <div className="flex justify-between">
                     <span className="font-medium">Father's Name:</span>
                     <span>Siba Priya Ganapati Ram</span>
@@ -157,10 +158,10 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border-emerald-500/30">
+            <Card className="bg-gray-800/70 border-emerald-500/30">
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Current Focus</h4>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray-200 text-sm">
                   • Completing MCA degree with AI specialization from IIT Ropar<br/>
                   • Building innovative projects and contributing to open source<br/>
                   • Seeking opportunities in full-stack development and AI<br/>

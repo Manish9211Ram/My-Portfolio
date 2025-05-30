@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, Gamepad2, Hospital, Puzzle, Bot, Link, Globe, Building, Leaf, Network } from "lucide-react";
@@ -91,7 +92,7 @@ const Projects = () => {
             Featured <span className="text-blue-400">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-200 text-lg max-w-3xl mx-auto">
             A showcase of my technical skills through diverse projects spanning AI, web development, 
             game creation, and system management solutions.
           </p>
@@ -101,7 +102,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className={`bg-gray-800/50 border-blue-500/20 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 ${
+              className={`bg-gray-800/70 border-blue-500/20 hover:bg-gray-800/90 transition-all duration-300 hover:scale-105 ${
                 project.highlight ? 'ring-2 ring-blue-500/50' : ''
               }`}
             >
@@ -114,13 +115,13 @@ const Projects = () => {
                 </div>
                 
                 <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                <p className="text-gray-200 mb-4 text-sm leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="px-2 py-1 bg-slate-700 text-gray-300 rounded text-xs"
+                      className="px-2 py-1 bg-gray-700 text-gray-200 rounded text-xs"
                     >
                       {tech}
                     </span>
@@ -152,21 +153,21 @@ const Projects = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Card className="bg-gradient-to-r from-blue-600/20 to-emerald-600/20 border-blue-500/30">
+          <Card className="bg-gray-800/70 border-blue-500/30">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold text-white mb-4">Project Highlights</h3>
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
                   <div className="text-3xl font-bold text-blue-400 mb-2">9+</div>
-                  <div className="text-gray-300">Completed Projects</div>
+                  <div className="text-gray-200">Completed Projects</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-blue-400 mb-2">5+</div>
-                  <div className="text-gray-300">Technologies Used</div>
+                  <div className="text-gray-200">Technologies Used</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-blue-400 mb-2">100%</div>
-                  <div className="text-gray-300">Passion Driven</div>
+                  <div className="text-gray-200">Passion Driven</div>
                 </div>
               </div>
             </CardContent>
