@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Menu, X, Home, User, GraduationCap, Code, Briefcase, Mail } from "lucide-react";
+import { Menu, X, Home, User, GraduationCap, Code, Briefcase, Mail, Award } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +10,7 @@ const Navigation = () => {
     { href: "#education", label: "Education", icon: GraduationCap },
     { href: "#skills", label: "Skills", icon: Code },
     { href: "#projects", label: "Projects", icon: Briefcase },
+    { href: "#experience", label: "Experience & Training", icon: Award },
     { href: "#contact", label: "Contact", icon: Mail },
   ];
 
