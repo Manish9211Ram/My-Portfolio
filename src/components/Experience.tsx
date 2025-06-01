@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Calendar, MapPin, Award, BookOpen, Code } from "lucide-react";
 
@@ -15,6 +14,20 @@ const Experience = () => {
         "Learning industry best practices",
         "Networking with professionals and fellow students",
         "Contributing to educational outreach programs"
+      ]
+    },
+    {
+      title: "AI Research Assistant",
+      company: "IIT Ropar",
+      duration: "January 2025 - Present",
+      type: "Research",
+      description: "Working on cutting-edge AI research projects, focusing on machine learning algorithms and neural networks. Contributing to academic publications and research papers.",
+      highlights: [
+        "Developed ML models for data analysis",
+        "Collaborated with PhD researchers",
+        "Published research findings in conferences",
+        "Implemented deep learning solutions",
+        "Contributed to open-source AI projects"
       ]
     },
     {
