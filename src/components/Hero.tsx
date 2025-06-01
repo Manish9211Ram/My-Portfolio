@@ -27,18 +27,21 @@ const Hero = () => {
           {/* Mobile-first layout with enhanced styling */}
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center text-center lg:text-left">
             
-            {/* Enhanced Photo - shows first on mobile */}
+            {/* Enhanced Photo with Glowing Border - shows first on mobile */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
               <div className="relative group animate-slide-in-right">
                 <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 relative">
-                  {/* Multiple animated background rings */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-violet-500 to-emerald-400 p-1 animate-spin-slow">
+                  {/* Animated glowing border rings */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-violet-500 to-emerald-500 p-1 animate-spin-slow shadow-[0_0_30px_rgba(59,130,246,0.5)]">
                     <div className="w-full h-full rounded-full bg-gray-900"></div>
                   </div>
                   
-                  <div className="absolute inset-1 rounded-full bg-gradient-to-r from-emerald-400 via-blue-500 to-violet-400 p-1 animate-spin-reverse">
+                  <div className="absolute inset-1 rounded-full bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500 p-1 animate-spin-reverse shadow-[0_0_20px_rgba(139,69,255,0.4)]">
                     <div className="w-full h-full rounded-full bg-gray-900"></div>
                   </div>
+
+                  {/* Outer glowing ring */}
+                  <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-blue-400 via-violet-400 to-emerald-400 opacity-75 blur-sm animate-pulse-glow"></div>
                   
                   {/* Main photo with enhanced styling */}
                   <div className="absolute inset-3 rounded-full overflow-hidden border-2 border-blue-400/50 shadow-2xl group-hover:scale-105 transition-all duration-700 bg-gradient-to-br from-gray-800 to-gray-900">
@@ -69,12 +72,6 @@ const Hero = () => {
             {/* Enhanced Text Content - shows second on mobile */}
             <div className="order-2 lg:order-1 space-y-6 sm:space-y-8">
               <div className="space-y-4">
-                <div className="mb-4">
-                  <span className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium animate-fade-in-up">
-                    👋 Welcome to my portfolio
-                  </span>
-                </div>
-                
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                   <span className="inline-block animate-slide-in-left">Hi, I'm</span>
                   <br />

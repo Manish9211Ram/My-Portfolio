@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -229,6 +228,16 @@ export default {
 					'50%': {
 						opacity: '0.6'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '0.5',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
@@ -249,7 +258,8 @@ export default {
 				'bounce-delayed': 'bounce-delayed 3s ease-in-out infinite 1.5s',
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
-				'pulse-slow-delayed': 'pulse-slow-delayed 4s ease-in-out infinite 2s'
+				'pulse-slow-delayed': 'pulse-slow-delayed 4s ease-in-out infinite 2s',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite'
 			}
 		}
 	},
