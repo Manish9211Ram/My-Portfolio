@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Calendar, MapPin, Award, BookOpen } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Award, BookOpen, Code } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -15,6 +15,19 @@ const Experience = () => {
         "Learning industry best practices",
         "Networking with professionals and fellow students",
         "Contributing to educational outreach programs"
+      ]
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Personal Projects",
+      duration: "January 2024 - Present",
+      type: "Freelance",
+      description: "Developing and maintaining multiple web applications using modern technologies including React, Node.js, and AI integrations.",
+      highlights: [
+        "Built 10+ responsive web applications",
+        "Integrated AI/ML models in web projects",
+        "Implemented modern UI/UX design principles",
+        "Collaborated with clients on project requirements"
       ]
     }
   ];
@@ -64,43 +77,45 @@ const Experience = () => {
               Professional Experience
             </h3>
             
-            {experiences.map((exp, index) => (
-              <Card 
-                key={index}
-                className="bg-gray-800/70 border-blue-500/20 hover:bg-gray-800/90 transition-all duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
-                      <p className="text-blue-400 font-medium">{exp.company}</p>
+            <div className="space-y-6">
+              {experiences.map((exp, index) => (
+                <Card 
+                  key={index}
+                  className="bg-gray-800/70 border-blue-500/20 hover:bg-gray-800/90 transition-all duration-300"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h4 className="text-xl font-semibold text-white">{exp.title}</h4>
+                        <p className="text-blue-400 font-medium">{exp.company}</p>
+                      </div>
+                      <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
+                        {exp.type}
+                      </span>
                     </div>
-                    <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm font-medium">
-                      {exp.type}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center text-gray-200 mb-4">
-                    <Calendar size={16} className="mr-2" />
-                    {exp.duration}
-                  </div>
-                  
-                  <p className="text-gray-200 mb-4">{exp.description}</p>
-                  
-                  <div className="space-y-2">
-                    <h5 className="text-white font-medium">Key Highlights:</h5>
-                    <ul className="text-gray-200 space-y-1">
-                      {exp.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className="flex items-start">
-                          <span className="text-blue-400 mr-2">•</span>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    
+                    <div className="flex items-center text-gray-200 mb-4">
+                      <Calendar size={16} className="mr-2" />
+                      {exp.duration}
+                    </div>
+                    
+                    <p className="text-gray-200 mb-4">{exp.description}</p>
+                    
+                    <div className="space-y-2">
+                      <h5 className="text-white font-medium">Key Highlights:</h5>
+                      <ul className="text-gray-200 space-y-1">
+                        {exp.highlights.map((highlight, hIndex) => (
+                          <li key={hIndex} className="flex items-start">
+                            <span className="text-blue-400 mr-2">•</span>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
             <Card className="mt-6 bg-gray-800/70 border-emerald-500/30">
               <CardContent className="p-6">
