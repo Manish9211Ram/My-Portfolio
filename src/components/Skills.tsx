@@ -1,44 +1,71 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Database, Cloud, Brain, Shield, Network } from "lucide-react";
+import { Code, Database, Cloud, Brain, Shield, Network, User, Heart } from "lucide-react";
 
 const Skills = () => {
-  const skillCategories = [
+  const technicalSkills = [
     {
+      category: "Programming Languages",
       icon: Code,
-      title: "Programming Languages",
-      skills: ["C", "C++", "Java", "Python", "R", "JavaScript", "PHP", "Shell Scripting"],
+      skills: ["C", "C++", "Java", "Python", "R", "JavaScript", "PHP", "Shell Scripting", "Prolog"],
       color: "blue"
     },
     {
+      category: "Web Technologies",
       icon: Database,
-      title: "Web Technologies",
-      skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "SQL", "NoSQL"],
+      skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Responsive Web Design", "MongoDB"],
       color: "emerald"
     },
     {
-      icon: Brain,
-      title: "AI & Data Science",
-      skills: ["Machine Learning", "Artificial Intelligence", "Data Science", "Algorithm Design"],
+      category: "Database & Data",
+      icon: Database,
+      skills: ["SQL", "NoSQL", "MySQL", "MariaDB", "SQLite", "MongoDB", "Database Management"],
       color: "violet"
     },
     {
+      category: "AI & Data Science",
+      icon: Brain,
+      skills: ["Machine Learning", "Artificial Intelligence", "Data Science", "Algorithm Design & Analysis"],
+      color: "cyan"
+    },
+    {
+      category: "Security & Systems",
       icon: Shield,
-      title: "Security & Systems",
-      skills: ["Cyber Security", "Information Security", "Operating Systems", "Unix Systems"],
+      skills: ["Cyber Security", "Information Security", "Operating Systems", "Unix Operating System Concepts"],
       color: "red"
     },
     {
-      icon: Network,
-      title: "Networking & Cloud",
-      skills: ["Networking", "Cloud Technology (AWS)", "Cisco Packet Tracer"],
+      category: "Cloud & Networking",
+      icon: Cloud,
+      skills: ["Cloud Technology (AWS)", "Networking", "Cisco Packet Tracer", "IoT"],
       color: "orange"
     },
     {
-      icon: Database,
-      title: "Core Concepts",
-      skills: ["Data Structures", "Digital Logic", "Database Management", "Software Engineering"],
-      color: "cyan"
+      category: "Core Concepts",
+      icon: Network,
+      skills: ["Data Structures with Competitive Coding", "Digital Logic", "Software Engineering", "Computer Graphics", "Discrete Mathematics and Numerical Analysis"],
+      color: "pink"
+    }
+  ];
+
+  const softSkills = [
+    {
+      category: "Work Ethics",
+      icon: User,
+      skills: ["Hard & Smart Working", "Honest & Punctual", "Attention to Detail", "Time Management"],
+      color: "green"
+    },
+    {
+      category: "Communication & Teamwork",
+      icon: Heart,
+      skills: ["Effective Communication", "Problem Solving", "Teamwork", "Adaptability"],
+      color: "indigo"
+    },
+    {
+      category: "Personal Interests",
+      icon: Heart,
+      skills: ["Programming", "Project Building", "Playing Cricket", "Playing Guitar", "Reading Books and Articles"],
+      color: "purple"
     }
   ];
 
@@ -49,7 +76,11 @@ const Skills = () => {
       violet: "from-violet-600/20 to-violet-800/20 border-violet-500/30",
       red: "from-red-600/20 to-red-800/20 border-red-500/30",
       orange: "from-orange-600/20 to-orange-800/20 border-orange-500/30",
-      cyan: "from-cyan-600/20 to-cyan-800/20 border-cyan-500/30"
+      cyan: "from-cyan-600/20 to-cyan-800/20 border-cyan-500/30",
+      pink: "from-pink-600/20 to-pink-800/20 border-pink-500/30",
+      green: "from-green-600/20 to-green-800/20 border-green-500/30",
+      indigo: "from-indigo-600/20 to-indigo-800/20 border-indigo-500/30",
+      purple: "from-purple-600/20 to-purple-800/20 border-purple-500/30"
     };
     return colors[color as keyof typeof colors] || colors.blue;
   };
@@ -68,54 +99,64 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card 
-              key={index}
-              className={`bg-gray-800/70 ${getColorClasses(category.color)} hover:scale-105 transition-all duration-300`}
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <category.icon className="text-white mr-3" size={28} />
-                  <h3 className="text-xl font-semibold text-white">{category.title}</h3>
-                </div>
-                <div className="space-y-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div 
-                      key={skillIndex}
-                      className="bg-gray-900/50 px-3 py-2 rounded-lg text-gray-200 hover:bg-gray-900/70 transition-colors duration-200"
-                    >
-                      {skill}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Technical Skills */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Technical Skills</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technicalSkills.map((category, index) => (
+              <Card 
+                key={index}
+                className={`bg-gray-800/70 ${getColorClasses(category.color)} hover:scale-105 transition-all duration-300`}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <category.icon className="text-white mr-3" size={24} />
+                    <h4 className="text-lg font-semibold text-white">{category.category}</h4>
+                  </div>
+                  <div className="space-y-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div 
+                        key={skillIndex}
+                        className="bg-gray-900/50 px-3 py-2 rounded-lg text-gray-200 hover:bg-gray-900/70 transition-colors duration-200 text-sm"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16">
-          <Card className="bg-gray-800/70 border-blue-500/30">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-semibold text-white mb-4">
-                Personal Strengths
-              </h3>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="space-y-2">
-                  <h4 className="text-lg font-semibold text-blue-400">Work Ethic</h4>
-                  <p className="text-gray-200">Hard & Smart Working, Honest & Punctual</p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-lg font-semibold text-blue-400">Creative Pursuits</h4>
-                  <p className="text-gray-200">Art, Playing Guitar, Reading Books</p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-lg font-semibold text-blue-400">Technical Passion</h4>
-                  <p className="text-gray-200">Programming, Project Building, Cricket</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        {/* Soft Skills */}
+        <div>
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Soft Skills & Personal Strengths</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {softSkills.map((category, index) => (
+              <Card 
+                key={index}
+                className={`bg-gray-800/70 ${getColorClasses(category.color)} hover:scale-105 transition-all duration-300`}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <category.icon className="text-white mr-3" size={24} />
+                    <h4 className="text-lg font-semibold text-white">{category.category}</h4>
+                  </div>
+                  <div className="space-y-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div 
+                        key={skillIndex}
+                        className="bg-gray-900/50 px-3 py-2 rounded-lg text-gray-200 hover:bg-gray-900/70 transition-colors duration-200 text-sm"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

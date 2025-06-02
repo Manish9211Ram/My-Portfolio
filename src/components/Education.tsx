@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 const Education = () => {
   const educationData = [
@@ -42,14 +42,20 @@ const Education = () => {
   ];
 
   const certifications = [
-    "OS-CIT - Odisha Computer Academy",
-    "DPGDCA - Odisha Computer Academy",
-    "Core & Advanced Python - Lakshay Institute of Technology",
-    "Core Java - Lakshay Institute of Technology",
-    "Frontend Development - Lakshay Institute of Technology",
-    "Machine Learning Introduction - Chandigarh University",
-    "Digital Content & Communication - Chandigarh University",
-    "Artificial Intelligence - Chandigarh University"
+    "Chandigarh University, CU Digital Content and Communication",
+    "INTERNSHALA, ISP 48 - Joining Letter",
+    "INTERNSHALA, ISP 48 FTC Webinar Certificate",
+    "REGIONAL COLLEGE OF MANAGEMENT, HackForge X Build with AI Participation Certificate",
+    "GIFT Autonomous, Codenexus Participation Certificate",
+    "Chandigarh University, CU AI",
+    "Chandigarh University, CU Cricket",
+    "Chandigarh University, CU Introduction to Machine Learning",
+    "Centurion University of Technology and Management, Avalanche India Bootcamp",
+    "K.R. Mangalam University, Hack KRMU Participation Certificate",
+    "Lets Upgrade, LU Nodejs Bootcamp",
+    "Lets Upgrade, LU Build with AI: Gemini Powered Youtube Summarizer",
+    "Lets Upgrade, LU Pre-placement Bootcamp",
+    "Lets Upgrade, LU JavaScript Bootcamp"
   ];
 
   return (
@@ -102,33 +108,22 @@ const Education = () => {
 
           {/* Certifications */}
           <div>
-            <h3 className="text-2xl font-semibold text-white mb-8">
+            <h3 className="text-2xl font-semibold text-white mb-8 flex items-center">
+              <Award className="text-blue-400 mr-3" size={28} />
               Certifications & Courses
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-4 max-h-96 overflow-y-auto pr-2">
               {certifications.map((cert, index) => (
                 <Card 
                   key={index}
                   className="bg-gray-800/60 border-blue-500/20 hover:bg-gray-800/80 transition-all duration-300"
                 >
                   <CardContent className="p-4">
-                    <p className="text-gray-200">{cert}</p>
+                    <p className="text-gray-200 text-sm">{cert}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
-
-            <Card className="mt-6 bg-gray-800/70 border-blue-500/30">
-              <CardContent className="p-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Recent Achievements</h4>
-                <ul className="text-gray-200 space-y-2">
-                  <li className="text-gray-200">• Internship at INTERNSHALA as ISP (March - April 2025)</li>
-                  <li className="text-gray-200">• Participation in ISP 48 First Trainings Contest Webinar</li>
-                  <li className="text-gray-200">• Let's Upgrade: Placement Prep & JavaScript Bootcamp</li>
-                  <li className="text-gray-200">• Node.js Bootcamp & AI-Powered YouTube Summarizer</li>
-                </ul>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
